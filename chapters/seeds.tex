@@ -1,0 +1,61 @@
+\chapter{Seeds} \label{ch:seeds}
+
+Most of the content in this chapter is based on ~\cite{aik023earthquake}, with language changed for clarity.
+
+\section{Set-up} \label{sec:setup}
+
+Let $I := \{1,2,\ldots,n\}$. Let $\cFF := \QQ(X^0_i:i\in I)$ be the field of rational functions on the variables $X^0_i$ for $i \in I$.
+
+\section{Labeled seeds and seed mutations} \label{seeds}
+\begin{definition}\label{def:labeledseed}
+    A \textit{labeled seed} is a pair $(\epsilon, \bX)$, where
+    \begin{enumerate}[i.]
+        \item
+            $\epsilon=(\epsilon_{ij})$ where $\epsilon_{ij} \in \ZZ$ for all $i,j \in I$ \sidenote{$\epsilon$ is an $n\times n$ matrix.} and $\epsilon$ is a skew-symmetrizable\sidenote{Its transpose is its negative.} matrix.
+            This means that there exists positive integers $d_i$ for $i \in I$ such that $\epsilon_{ij}d_j = -\epsilon_{ji}d_j$ for $\epsilon_{ij} \in \epsilon$.
+        \item
+            $\bX = (X_i)$ for $i \in I$ is a transcendence basis\sidenote{Not sure what this means right now.} of $\cF_X$. $\cF_X \cong \QQ(X_i:i\in I)$.
+    \end{enumerate}
+
+    The matrix $\epsilon$ is the \textit{exchange matrix}, and the variables $X_i$ are called the \textit{$\cXX$-variables}.
+\end{definition}
+
+Let $\cS$ denote the set of all labeled seeds in $\cF_X$. Let $\sgn(x) \in \{-1, 0, +1\}$  denote the sign of a real number $x$.\sidenote{$-1$ if $x<0$, $0$ if $x=0$, $+1$ if $x>0$}
+
+\begin{definition}\label{def:seedmutation}
+    The \textit{seed mutation} $\mu_k: \cS \rightarrow \cS, ((\epsilon, \bX) \mapsto (\epsilon', \bX')$ at some $k \in I$ is given by:
+    \begin{equation}
+        \epsilon'_{ij} = \begin{cases}
+            -\epsilon_{ij} & \text{if } i=k \text{ or} j=k,\\
+            \epsilon_{ij} + \frac{|\epsilon_{ik}|e_{kj} + \epsilon_{ik}|\epsilon_{kj}}{2} & \text{otherwise}
+        \end{cases}
+    \end{equation}
+
+    \begin{equation}
+        X'_i = \begin{cases}
+            X^{-1}_k & \text{if } i=k,\\
+            X_i(1+X^{-\sgn(\epsilon_{ik})}_k)^{-\epsilon_{ik}} & \text{otherwise}
+        \end{cases}
+    \end{equation}
+
+    The transformation $\bX \mapsto bX'$ is called the \textit{cluster $\cXX$\sidenote{read "x"}-transformation} at $k$.
+
+    The seed mutation $\mu_k$ is involutive\sidenote{Applying it twice returns you to the original seed.}.
+\end{definition}
+
+\begin{definition}\label{def:mutation-equivalence}
+    Two labeled seeds $(\epsilon, \bX), (\epsilon', \bX')$ are \textit{mutation-equivalent} if there is a finite composition of seed mutations and permutations that maps $(\epsilon, \bX)$ to $(\epsilon', \bX')$.
+
+    Equivalence classes based on mutation-equivalence are called \textit{mutation classes} and usually labeled $\bs$.
+
+    \begin{quote}
+        Mutation classes of labeled seeds are the basic subjects in the research field of cluster algebra.\cite{aik023earthquake}\sidenote{Approved by Dr. Dylan.}
+    \end{quote}
+\end{definition}
+
+\begin{definition}
+    The relationships between labeled seeds in a mutation class $\bs$ can be encoded in the \textit{(labeled) exchange graph} $\exch_{\bs}$. Each vertex $v$ corresponds to a labeled seed $\bs^{(v)} \in \bs$. There are two kinds of labeled edges:
+    \begin{itemize}
+        \item labeled edges of the form
+    \end{itemize}
+\end{definition}
